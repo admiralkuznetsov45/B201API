@@ -5,7 +5,7 @@ const express = require('express');
 const url = process.env.mongourl
 //Import Mongoose
 const mongoose = require('mongoose');
-mongoose.connect(url, {useNewUrlParser:true})
+mongoose.connect(url, {useNewUrlParser:true, useUnifiedTopology: true} )
 const con = mongoose.connection
 //Enkripsi di DB
 const bcrypt = require('bcrypt');
